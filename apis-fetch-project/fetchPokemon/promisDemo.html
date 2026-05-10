@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises Example</title>
+</head>
+<body>
+    <!-- promise - an obj that manages asynchronous operation.
+    "I promise to return a value"
+    PENDING->RESOLVED or REJECTED -->
+    <script>
+        function reachCollege(){
+            return new Promise((resolve,reject) => {
+                    setTimeout(()=>{
+                    
+                    const reach = true;
+                    if(reach)
+                        resolve("you reached college.");
+                    else
+                        reject("you didnt reach your COLLEGE!!");
+                },1000);
+            });
+            
+        }
+        function scanIdCard(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    const scan = true;
+                    if(scan)
+                        resolve("YOU scanned your ID!");
+                    else
+                        reject("you didnt scan your ID!!");
+                },2500);
+            });
+        
+        }
+        function enterClass(callback){ 
+            return new Promise((resolve,reject)=>{
+                 setTimeout(()=>{
+                    const enter = false;
+                    if(enter)
+                        resolve("YOU entered the CLASS!");
+                    else
+                        reject("you didnt enter your CLASS!!");
+                },1500); 
+            });        
+        }
+
+        // reachCollege().then(value =>{console.log(value); return scanIdCard();})
+        // .then(value =>{console.log(value); return enterClass();})
+        // .then(value =>{console.log(value); console.log("GOOD Job!!");})
+        // .catch(error=> {console.error("task incomplete");})
+
+        //async-makes a function return a promise
+        //await - makes an async functino wait for a promise
+        //helps to write asynchronous code in synchronous manner
+        async function classRoutine(){
+            try{ 
+            const reachCollegeResult = await reachCollege();
+            console.log(reachCollegeResult);
+
+            const scanIdCardResult = await scanIdCard();
+            console.log(scanIdCardResult);
+
+            const enterClassResult = await enterClass();
+            console.log(enterClassResult);
+
+            console.log("Class ROUTINE Completed!");
+        }catch(error){
+            console.error(error)
+        }
+           
+        }
+
+        classRoutine();
+      
+    </script>
+</body>
+</html>

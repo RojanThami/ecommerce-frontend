@@ -1,0 +1,26 @@
+body{
+    background-image: url(IMG_2140-Edit.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+}
+
+#clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock{
+    font-size: 6.5rem;
+    color: blue;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(86, 39, 39, 0.5);
+    width: 50%;
+    
+}

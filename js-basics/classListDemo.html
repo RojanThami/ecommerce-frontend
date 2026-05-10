@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myButtons{
+            padding: 10px 20px;
+            font-size: 4rem;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .enabled {
+            background-color: lightgreen;
+        }
+        .hovered {
+            box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+            font-weight: bold;
+        }
+        .disabled {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <button class="myButtons">Button 1</button>
+    <button class="myButtons">Button 2</button>
+    <button class="myButtons">Button 3</button>
+    <button class="myButtons">Button 4</button>
+
+    <script>
+        let buttons = document.querySelectorAll('.myButtons');
+
+        buttons.forEach(button => {   
+                button.classList.add('enabled');
+            });
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', function() {
+                button.classList.toggle('hovered');
+            });
+        });
+        buttons.forEach(button => {
+            button.addEventListener('mouseout', function() {
+                button.classList.toggle('hovered');
+            });
+        });
+        buttons.forEach(button => {
+            button.addEventListener('click', event => {
+                if (button.classList.contains('disabled')) {
+                    event.target.textContent += "hi";
+                }
+                else{
+                button.classList.replace('enabled', 'disabled');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

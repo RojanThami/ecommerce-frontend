@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+         @media (max-width:650px) {
+            .body {
+                font-size: 14px;
+            }
+             header {
+                flex-direction: column;
+                align-items: center;
+            }
+             nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #e5dfdf;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        #header-img {
+            height: 40px;
+        }
+        nav a {
+            color: red;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        nav a:hover {
+            color: green;
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" id="header-img" alt="logo">
+        <nav id="nav-bar">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#video-section" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="features">
+            <h1>Welcome to Our Website</h1>
+            <p>This is the home section.</p>
+        </section>
+        <section id="video-section">
+            <h1>Watch Us</h1>
+            <iframe 
+            id="video"
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            allowfullscreen>
+            </iframe>       
+         </section>
+        <!-- SECTION 3 -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+
+    <!-- FORM -->
+    <form 
+      id="form" 
+      action="https://www.freecodecamp.org/email-submit"
+    >
+      
+      <input 
+        id="email"
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      >
+
+      <input 
+        id="submit"
+        type="submit"
+        value="Submit"
+      >
+
+    </form>
+
+  </section>
+    <script src="test.js"></script>
+</body>
+
+</html>

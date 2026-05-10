@@ -1,0 +1,46 @@
+.slider {
+    position: relative;
+    width: 60%;
+    height: 70vh;        /* fits within the screen — no scrolling */
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;        /* fills the slider box */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;        /* needs this for object-fit to work */
+    object-fit: contain; /* shows full image, no cropping */
+    display: none;
+}
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    background-color: hsla(0,0%,0%,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev{
+ left:0;
+}
+.next{
+ right:0;
+}
+
+@keyframes fade{
+    from{opacity: .5;}
+    to{opacity: 1;}
+}

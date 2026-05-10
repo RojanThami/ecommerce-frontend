@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="hideBtn">Hide</button>
+    <img src="1.png" alt="dice" id="diceImg">
+
+    <script>
+        const hideBtn = document.getElementById('hideBtn');
+        const diceImg = document.getElementById('diceImg');
+
+        hideBtn.addEventListener('click', function() {
+            if (diceImg.style.visibility === 'hidden') {
+                diceImg.style.visibility = 'visible';
+                hideBtn.textContent = 'Hide';
+            } else {
+                diceImg.style.visibility = 'hidden';
+                hideBtn.textContent = 'Show';
+            }
+        });
+    </script>
+</body>
+</html>
