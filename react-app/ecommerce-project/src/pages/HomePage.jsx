@@ -6,7 +6,7 @@ export function HomePage() {
     <>
       <title>Ecommerce-project</title>
 
-      <Header></Header>
+      <Header />
 
       <div className="home-page">
         <div className="products-grid">
@@ -64,7 +64,7 @@ export function HomePage() {
               </div>
             );
           })}
-          
+
         </div>
       </div>
     </>
