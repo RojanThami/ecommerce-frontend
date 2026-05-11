@@ -40,6 +40,7 @@ export default [
 
       // Prevent unused variables (ignore variables starting with capital or _)
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'react/prop-types' : 'off'
     },
   },
 ]
