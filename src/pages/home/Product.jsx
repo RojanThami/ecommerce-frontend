@@ -42,7 +42,7 @@ export function Product({product, loadCart}) {
       <div className="product-quantity-container">
         <select
           value={quantity}
-          onChange={selectQuantity}//kljdlj
+          onChange={selectQuantity}
         >
           <option value="1">1</option>
           <option value="2">2</option>
